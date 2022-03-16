@@ -1,9 +1,7 @@
-import { redis } from "./server/redis";
-
-async function main(){
-    const result = await redis();
-
-    console.log(result);
+export function sum(a: number, b: number): number {
+    return a + b;
 }
 
-main();
+export function diff(a: number, b: number): number {
+    return a - b;
+}
