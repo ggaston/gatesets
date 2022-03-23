@@ -1,5 +1,4 @@
 import { sum } from "../src/index";
-
 import assert from "assert";
 
 describe('Index tests', function() {

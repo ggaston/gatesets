@@ -9,7 +9,7 @@
 		"dev": "snowpack dev",
 		"build": "tsc -p .",
 		"test": "mocha",
-		"test:watch": "mocha -r ts-node/register --watch --watch-files src/**/*.ts,test/**/*.ts",
+		"test:watch": "mocha -r ts-node/register --watch --watch-files src/**/*.ts,test/**/*.ts --parallel",
 		"test:coverage": "c8 npm test",
 		"test:wtr": "web-test-runner \"test/**/*.test.ts\" --puppeteer --watch",
 		"lint": "eslint . --ext .ts"
