@@ -6,6 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "node --loader ts-node/esm --no-warnings src/index.ts",
+		"server": "node --loader ts-node/esm --no-warnings src/server/index.ts",
 		"dev": "snowpack dev",
 		"build": "tsc -p .",
 		"test": "mocha",
@@ -44,5 +45,8 @@
 			"text",
 			"html"
 		]
+	},
+	"dependencies": {
+		"koa": "^2.13.4"
 	}
 }
