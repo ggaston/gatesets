@@ -6,4 +6,4 @@ export function diff(a: number, b: number): number {
     return a - b;
 }
 
-console.log('hello snowpack')
+console.log('hello snowpack!')
