@@ -5,14 +5,14 @@
 	"main": "index.ts",
 	"type": "module",
 	"scripts": {
-		"start": "node --loader ts-node/esm --no-warnings src/index.ts",
-		"server": "node --loader ts-node/esm --no-warnings src/server/index.ts",
+		"start": "node --experimental-specifier-resolution=node --loader ./esm-loader.js --no-warnings src/index.ts",
+		"server": "node --experimental-specifier-resolution=node --loader ./esm-loader.js --no-warnings src/server/index.ts",
 		"dev": "snowpack dev",
-		"build": "tsc -p .",
+		"build": "tsc -p ./build.tsconfig.json",
 		"test": "mocha",
-		"test:watch": "mocha -r ts-node/register --watch --watch-files src/**/*.ts,test/**/*.ts --parallel",
+		"test:watch": "mocha --watch --parallel --watch-files src/**/*.ts,test/**/*.ts",
 		"test:coverage": "c8 npm test",
-		"test:wtr": "web-test-runner \"test/**/*.test.ts\" --puppeteer --watch",
+		"test:wtr": "web-test-runner \"test/index.test.ts\" --puppeteer --watch",
 		"lint": "eslint . --ext .ts"
 	},
 	"keywords": [],
@@ -38,6 +38,7 @@
 		"snowpack": "^3.8.8",
 		"testdouble": "^3.16.4",
 		"ts-node": "^10.7.0",
+		"tsconfig-paths": "^3.14.1",
 		"tslib": "^2.3.1",
 		"typescript": "^4.6.2"
 	},

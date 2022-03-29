@@ -1,20 +1,22 @@
 {
     "compilerOptions": {
         "target": "es6",
-        "module": "ESNext",
+        "module": "es6",
         "rootDir": "src",
         "outDir": "build",
         "esModuleInterop": true,
         "sourceMap": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "api/*": ["src/server/api/v1/*"]
+        }
     },
     "ts-node": {
         "swc": true,
         "transpileOnly": true
-    },
-    "exclude": [
-        "test"
-    ]
+    }
 }

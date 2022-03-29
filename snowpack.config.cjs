@@ -5,11 +5,16 @@
 module.exports = {
   mount: {
     public: { url: '/', static: true },
-    src: { url: '/dist' },
+    'src/app': { url: '/dist' },
     test: { url: '/test'}
   },
   plugins: [
-    '@snowpack/plugin-typescript'
+    ['@snowpack/plugin-typescript', {'args': '--project ./snowpack.tsconfig.json'}]
+  ],
+  exclude: [
+    '**/src/server/**/*',
+    '/test/**/*',
+    '**/*.test.ts'
   ],
   packageOptions: {
     /* ... */

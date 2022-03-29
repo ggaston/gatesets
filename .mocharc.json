@@ -1,6 +1,7 @@
 {
     "extension": ["ts"],
-    "node-option": ["experimental-specifier-resolution=node", "loader=ts-node/esm", "no-warnings"],
+    "node-option": ["experimental-specifier-resolution=node", "loader=./esm-loader.js", "no-warnings"],
     "spec": ["test/**/*.test.ts"],
-    "require": "mocha.setup.js"
+    "require": "mocha.setup.js",
+    "ui": "bdd"
 }

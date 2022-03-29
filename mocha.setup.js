@@ -1,5 +1,7 @@
 
+import assert from 'assert'
 import * as td from 'testdouble';
+
 global.td = td;
 
 export const mochaHooks = {
