@@ -1,4 +1,4 @@
-import { sum } from "../src/index";
+import { sum } from "../src/app/index";
 import assert from "assert";
 
 describe('Index tests', function() {
